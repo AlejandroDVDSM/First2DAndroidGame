@@ -206,7 +206,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 261119677}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 813225370}
+        m_TargetAssemblyTypeName: SceneController, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Game
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &261119677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -258,6 +270,7 @@ GameObject:
   - component: {fileID: 813225367}
   - component: {fileID: 813225366}
   - component: {fileID: 813225370}
+  - component: {fileID: 813225371}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -361,6 +374,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5373cde833b8d5428725b46f8a43573, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &813225371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 813225365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adfa34e7d39af74469453091d720ad73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &823201376
 GameObject:
   m_ObjectHideFlags: 0
@@ -444,7 +469,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 823201379}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 813225371}
+        m_TargetAssemblyTypeName: QuitApplication, Assembly-CSharp
+        m_MethodName: Quit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &823201379
 MonoBehaviour:
   m_ObjectHideFlags: 0
