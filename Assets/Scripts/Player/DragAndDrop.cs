@@ -10,11 +10,13 @@ public class DragAndDrop : MonoBehaviour
     Vector2 touchPosition;
 
     bool moveAllowed;
+    PlayerBounds playerBounds;
 
     // Start is called before the first frame update
     void Start()
     {
         myCollider = GetComponent<Collider2D>();
+        playerBounds = GetComponent<PlayerBounds>();
     }
 
     // Update is called once per frame
@@ -25,7 +27,7 @@ public class DragAndDrop : MonoBehaviour
             touch = Input.GetTouch(0);
             touchPosition = Camera.main.ScreenToWorldPoint(touch.position);
 
-            switch(touch.phase)
+            switch (touch.phase)
             {
                 case TouchPhase.Began:
                     Collider2D touchedCollider = Physics2D.OverlapPoint(touchPosition);
@@ -33,7 +35,7 @@ public class DragAndDrop : MonoBehaviour
                     break;
 
                 case TouchPhase.Moved:
-                    if (moveAllowed) transform.position = touchPosition;
+                    if (moveAllowed && playerBounds.IsInBounds(touchPosition.x)) transform.position = new Vector2(touchPosition.x, transform.position.y);
                     break;
 
                 case TouchPhase.Ended:
@@ -41,12 +43,5 @@ public class DragAndDrop : MonoBehaviour
                     break;
             }
         }
-    }
-
-    bool PlayerTouchedCapsule(Touch touch)
-    {
-        if (touch.phase == TouchPhase.Began) return true;
-
-        return false;
     }
 }
