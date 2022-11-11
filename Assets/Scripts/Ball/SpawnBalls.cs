@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class SpawnBalls : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] GameObject ballPrefab;
+    Vector2 respawnPos;
+    float randomX;
+
     void Start()
     {
-        
+        InvokeRepeating("SpawnBall", 1.0f, 1.5f);
     }
 
-    // Update is called once per frame
-    void Update()
+    void SpawnBall()
     {
-        
+        randomX = Random.Range(-2.0f, 2.0f);
+        respawnPos = new Vector2(randomX, ballPrefab.transform.position.y);
+        Instantiate(ballPrefab, respawnPos, transform.rotation);
     }
 }
