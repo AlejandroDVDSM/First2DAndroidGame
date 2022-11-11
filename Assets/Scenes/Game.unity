@@ -320,7 +320,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3914b3c0ba7eca04492baf8768f187f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ballPrefab: {fileID: 1282809643114629250, guid: 7818cb136cc9b414897969b920bcf9bf, type: 3}
+  elementPrefab: {fileID: 604218030987566542, guid: bc4aa23f9f3c0914699e3e3feb52f2c6, type: 3}
+  minValueAllowed: -3
+  maxValueAllowed: 3
 --- !u!4 &1595724489
 Transform:
   m_ObjectHideFlags: 0
@@ -532,7 +534,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: b6cdd8e4253c7cd43ab39129eb826b78, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
