@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2628042849643565957}
   m_Layer: 0
   m_Name: Emerald
-  m_TagString: Untagged
+  m_TagString: GoodElement
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
