@@ -2,8 +2,7 @@ using UnityEngine;
 
 public class SpawnElements : MonoBehaviour
 {
-    [SerializeField] GameObject elementPrefab;
-    [SerializeField] float minValueAllowed, maxValueAllowed;
+    [SerializeField] float minXAllowed, maxXAllowed;
     [SerializeField] GameObject[] badElements, goodElements, upgrades;
 
     float randomX;
@@ -17,7 +16,7 @@ public class SpawnElements : MonoBehaviour
 
     void SpawnElement()
     {
-        randomX = Random.Range(minValueAllowed, maxValueAllowed);
+        randomX = Random.Range(minXAllowed, maxXAllowed);
         respawnPos = new Vector2(randomX, transform.position.y);
         randomElement = Random.Range(0, badElements.Length);
         int typeOfElement = Random.Range(-1, 2);
