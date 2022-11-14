@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2212357283129642619}
   - component: {fileID: 2212357283129642618}
   - component: {fileID: 7304207732648693470}
+  - component: {fileID: -1511346715954442094}
   m_Layer: 0
   m_Name: Death
   m_TagString: BadElement
@@ -147,3 +148,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lowerLimit: -8
+--- !u!114 &-1511346715954442094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2212357283129642613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 244288080d514ca4ead51bc6765db636, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  element: {fileID: 11400000, guid: 2bb613e1cb295a647ae1f8a522bfb56c, type: 2}

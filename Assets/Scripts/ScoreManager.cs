@@ -8,13 +8,19 @@ public class ScoreManager : MonoBehaviour
 
     public int Score { get => score; }
 
-    public void AddScore(int pointsToAdd)
+    public void AddScore(int scoreToAdd)
     {
-        score += pointsToAdd;
+        score += scoreToAdd;
     }
 
-    public void SubstractScore(int pointsToSubstract)
+    public void SubstractScore(int scoreToSubstract)
     {
-        if (score > 0) score -= pointsToSubstract;
+        if (score - scoreToSubstract > 0)
+        {
+            score -= scoreToSubstract;
+        } else
+        {
+            score = 0;
+        }
     }
 }

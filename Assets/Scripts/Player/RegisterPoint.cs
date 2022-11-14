@@ -14,14 +14,16 @@ public class RegisterPoint : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        switch(collision.gameObject.tag)
+        int score = collision.gameObject.GetComponent<ElementData>().Element.score;
+
+        switch (collision.gameObject.tag)
         {
             case "BadElement":
-                scoreManagerScript.SubstractScore(1);
+                scoreManagerScript.SubstractScore(score);
                 break;
 
             case "GoodElement":
-                scoreManagerScript.AddScore(1);
+                scoreManagerScript.AddScore(score);
                 break;
         }
 

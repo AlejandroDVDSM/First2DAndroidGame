@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6178011883798931669}
   - component: {fileID: 6178011883798931674}
   - component: {fileID: 4217332256737749708}
+  - component: {fileID: 8695467475065253182}
   m_Layer: 0
   m_Name: Danger
   m_TagString: BadElement
@@ -148,3 +149,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lowerLimit: -8
+--- !u!114 &8695467475065253182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6178011883798931678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 244288080d514ca4ead51bc6765db636, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  element: {fileID: 11400000, guid: 5077dcf8eef8e02488bd943e181adb0b, type: 2}

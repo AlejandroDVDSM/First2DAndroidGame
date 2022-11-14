@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3691537517366608979}
   - component: {fileID: 3691537517366608980}
   - component: {fileID: 3691537517366608981}
+  - component: {fileID: -702805697349455871}
   m_Layer: 0
   m_Name: Money
   m_TagString: GoodElement
@@ -147,3 +148,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lowerLimit: -8
+--- !u!114 &-702805697349455871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3691537517366608982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 244288080d514ca4ead51bc6765db636, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  element: {fileID: 11400000, guid: ddb8fd003724a73429b5b5dae2e016cf, type: 2}
