@@ -16,10 +16,20 @@ public class TriggerInstructionsMenu : MonoBehaviour
 
         pagesHolder.SetActive(true);
     }
+    
+    public void HideInstructions()
+    {
+        playButton.SetActive(true);
+        instructionsButton.SetActive(true);
+        quitButton.SetActive(true);
+        titleGame.SetActive(true);
+
+        pagesHolder.SetActive(false);
+    }
 
     public void NextPage()
     {
-
+        //pagesHolder.GetComponent<RectTransform>().position = new Vector3(-160, pagesHolder.transform.position.y, 0);
     }
 
     public void PrevPage()
