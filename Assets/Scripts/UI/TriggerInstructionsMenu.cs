@@ -1,11 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 
 public class TriggerInstructionsMenu : MonoBehaviour
 {
-    [SerializeField] GameObject playButton, instructionsButton, quitButton, titleGame, pagesHolder;
+    [SerializeField] GameObject playButton, instructionsButton, quitButton, titleGame, scroll;
 
     public void TriggerInstructions()
     {
@@ -14,7 +12,7 @@ public class TriggerInstructionsMenu : MonoBehaviour
         quitButton.SetActive(false);
         titleGame.SetActive(false);
 
-        pagesHolder.SetActive(true);
+        scroll.SetActive(true);
     }
     
     public void HideInstructions()
@@ -24,17 +22,7 @@ public class TriggerInstructionsMenu : MonoBehaviour
         quitButton.SetActive(true);
         titleGame.SetActive(true);
 
-        pagesHolder.SetActive(false);
-    }
-
-    public void NextPage()
-    {
-        //pagesHolder.GetComponent<RectTransform>().position = new Vector3(-160, pagesHolder.transform.position.y, 0);
-    }
-
-    public void PrevPage()
-    {
-
+        scroll.SetActive(false);
     }
 
 }
