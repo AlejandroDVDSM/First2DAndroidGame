@@ -6,6 +6,7 @@ TagManager:
   tags:
   - BadElement
   - GoodElement
+  - Upgrade
   layers:
   - Default
   - TransparentFX

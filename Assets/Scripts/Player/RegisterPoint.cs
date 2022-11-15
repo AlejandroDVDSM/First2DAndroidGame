@@ -25,6 +25,10 @@ public class RegisterPoint : MonoBehaviour
             case "GoodElement":
                 scoreManagerScript.AddScore(score);
                 break;
+
+            case "Upgrade":
+                Debug.Log(collision.gameObject.name);
+                break;
         }
 
         Destroy(collision.gameObject);
