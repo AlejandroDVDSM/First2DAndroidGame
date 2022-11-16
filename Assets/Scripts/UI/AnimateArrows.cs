@@ -25,11 +25,9 @@ public class AnimateArrows : MonoBehaviour
     {
         if (timeToGetClose)
         {
-            Debug.Log(true);
             GetCloserToTargetPosition();
         } else
         {
-            Debug.Log(false);
             MoveAwayFromTargetPosition();
         }
     }
@@ -40,8 +38,6 @@ public class AnimateArrows : MonoBehaviour
 
         var currentPosX = Math.Round(transform.position.x, 2);
         var targetPositionRoundedX = Math.Round(targetPosition.x, 2);
-
-        //Debug.LogFormat("currentPosX: {0}, targetPositionX: {1}, {2}", currentPosX, targetPositionX, currentPosX == targetPositionX);
 
         if (currentPosX == targetPositionRoundedX) timeToGetClose = false;
 
