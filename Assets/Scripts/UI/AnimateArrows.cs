@@ -25,9 +25,11 @@ public class AnimateArrows : MonoBehaviour
     {
         if (timeToGetClose)
         {
+            Debug.Log(true);
             GetCloserToTargetPosition();
         } else
         {
+            Debug.Log(false);
             MoveAwayFromTargetPosition();
         }
     }
@@ -37,8 +39,11 @@ public class AnimateArrows : MonoBehaviour
         transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
 
         var currentPosX = Math.Round(transform.position.x, 2);
+        var targetPositionRoundedX = Math.Round(targetPosition.x, 2);
 
-        if (currentPosX == targetPosition.x) timeToGetClose = false;
+        //Debug.LogFormat("currentPosX: {0}, targetPositionX: {1}, {2}", currentPosX, targetPositionX, currentPosX == targetPositionX);
+
+        if (currentPosX == targetPositionRoundedX) timeToGetClose = false;
 
     }
     
@@ -47,7 +52,8 @@ public class AnimateArrows : MonoBehaviour
         transform.position = Vector3.SmoothDamp(transform.position, originalPosition, ref velocity, smoothTime);
 
         var currentPosX = Math.Round(transform.position.x, 2);
+        var originalPositionRoundedX = Math.Round(originalPosition.x, 2);
 
-        if (currentPosX == originalPosition.x) timeToGetClose = true;
+        if (currentPosX == originalPositionRoundedX) timeToGetClose = true;
     }
 }
