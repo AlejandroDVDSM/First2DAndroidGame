@@ -38,7 +38,6 @@ public class FirebaseManager : MonoBehaviour
             Debug.Log("{ " + auth.CurrentUser.UserId + " } user is already authenticated");
             return;
         }
-
         auth.SignInAnonymouslyAsync().ContinueWith(task => {
             if (task.IsCanceled)
             {
