@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "102671795985",
+    "project_id": "unity-firebase-55426",
+    "storage_bucket": "unity-firebase-55426.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:102671795985:android:5a964bff2959ccc8efeeb0",
+        "android_client_info": {
+          "package_name": "com.risingpixel.androidgame"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "102671795985-qn6rg1sclat12k3esqt75l2ils842e91.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9w4Z5IWV48QxuCSURdz8J3BTDYbq9WfM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "102671795985-qn6rg1sclat12k3esqt75l2ils842e91.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
