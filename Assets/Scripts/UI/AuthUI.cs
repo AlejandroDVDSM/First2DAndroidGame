@@ -4,19 +4,17 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class SetButtonInteractivity : MonoBehaviour
+public class AuthUI : MonoBehaviour
 {
-
     [SerializeField] TMP_InputField _nameInputField;
-    [SerializeField] GameObject _errorMessage;
+    [SerializeField] GameObject _errorMessage, _authenticateContainer, _playContainer;
     [SerializeField] Button _confirmButton;
 
     public void SetConfirmButtonInteractivity()
     {
-        if (CheckMinLength())
+        if (NameIsGreaterThanMinLength())
         {
             _confirmButton.interactable = true;
-            Debug.Log(_confirmButton.interactable);
             _errorMessage.SetActive(false);
         } else
         {
@@ -26,10 +24,16 @@ public class SetButtonInteractivity : MonoBehaviour
         
     }
 
-    bool CheckMinLength()
+    bool NameIsGreaterThanMinLength()
     {
         if (_nameInputField.text.Length >= 3) return true;
 
         return false;
+    }
+
+    public void HideAuthUI()
+    {
+        _authenticateContainer.SetActive(false);
+        _playContainer.SetActive(true);
     }
 }
