@@ -9,6 +9,18 @@ public class AuthUI : MonoBehaviour
     [SerializeField] TMP_InputField _nameInputField;
     [SerializeField] GameObject _errorMessage, _authenticateContainer, _playContainer;
     [SerializeField] Button _confirmButton;
+    [SerializeField] FirebaseManager _firebaseManager;
+
+    void Update()
+    {
+        /*if (_firebaseManager.IsUserAuthenticated)
+        {
+            _playContainer.SetActive(true);
+        } else
+        {
+            _authenticateContainer.SetActive(false);
+        }*/
+    }
 
     public void SetConfirmButtonInteractivity()
     {
@@ -21,7 +33,6 @@ public class AuthUI : MonoBehaviour
             _confirmButton.interactable = false;
             _errorMessage.SetActive(true);
         }
-        
     }
 
     bool NameIsGreaterThanMinLength()
@@ -31,9 +42,8 @@ public class AuthUI : MonoBehaviour
         return false;
     }
 
-    public void HideAuthUI()
+    public void HideAUthUI()
     {
         _authenticateContainer.SetActive(false);
-        _playContainer.SetActive(true);
     }
 }

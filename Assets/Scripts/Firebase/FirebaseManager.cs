@@ -6,8 +6,12 @@ public class FirebaseManager : MonoBehaviour
 {
     FirebaseApp _app;
 
-    [SerializeField] GameObject _playContainer, _authContainer;
+    /*[SerializeField] TriggerPlayContainer _triggerPlayContainer;
+    [SerializeField] AuthUI _authUI;
+    [SerializeField] GameObject _playContainer;*/
+    bool _isUserAuthenticated = false;
 
+    public bool IsUserAuthenticated { get => _isUserAuthenticated; }
 
     // Start is called before the first frame update
     void Start()
@@ -36,9 +40,8 @@ public class FirebaseManager : MonoBehaviour
     {
         FirebaseAuth auth = FirebaseAuth.DefaultInstance;
 
-        if (auth.CurrentUser != null)
+        if (IsUserLoggedIn())
         {
-
             Debug.Log("{ " + auth.CurrentUser.UserId + " } user is already authenticated");
             return;
         }
@@ -59,5 +62,18 @@ public class FirebaseManager : MonoBehaviour
             Debug.LogFormat("User signed in successfully: {0} ({1})",
                 newUser.DisplayName, newUser.UserId);
         });
+    }
+
+    bool IsUserLoggedIn()
+    {
+        FirebaseAuth auth = FirebaseAuth.DefaultInstance;
+        if (auth.CurrentUser != null)
+        {
+            _isUserAuthenticated = true;
+            return true;
+        }
+
+        _isUserAuthenticated = false;
+        return false;
     }
 }

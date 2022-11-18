@@ -645,7 +645,19 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2027085777}
         m_TargetAssemblyTypeName: AuthUI, Assembly-CSharp
-        m_MethodName: HideAuthUI
+        m_MethodName: HideAUthUI
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2027085779}
+        m_TargetAssemblyTypeName: TriggerPlayContainer, Assembly-CSharp
+        m_MethodName: ShowPlayContainer
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2704,7 +2716,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1414382803}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 198.36795, y: 165.6821, z: 0.1801914}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2993,8 +3005,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1a71f717d16edb499cb57c57808a7e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playContainer: {fileID: 0}
-  _authContainer: {fileID: 0}
 --- !u!4 &1472114334
 Transform:
   m_ObjectHideFlags: 0
@@ -3003,7 +3013,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1472114332}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 69.80762, y: 128.38269, z: -2.809785}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4905,6 +4915,7 @@ GameObject:
   - component: {fileID: 2027085776}
   - component: {fileID: 2027085778}
   - component: {fileID: 2027085777}
+  - component: {fileID: 2027085779}
   m_Layer: 0
   m_Name: UIManager
   m_TagString: Untagged
@@ -4944,6 +4955,7 @@ MonoBehaviour:
   _authenticateContainer: {fileID: 1132377377}
   _playContainer: {fileID: 1458927374}
   _confirmButton: {fileID: 256758799}
+  _firebaseManager: {fileID: 1472114333}
 --- !u!114 &2027085778
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4961,6 +4973,19 @@ MonoBehaviour:
   _quitButton: {fileID: 562755949}
   _scroll: {fileID: 1535330266}
   _explosions: {fileID: 823575414}
+--- !u!114 &2027085779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2027085775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e6b10b2c03ccd44c838ccf93049c68e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playContainer: {fileID: 1458927374}
 --- !u!1 &2126175750
 GameObject:
   m_ObjectHideFlags: 0
