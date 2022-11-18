@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class TriggerPauseMenu : MonoBehaviour
 {
-    [SerializeField] GameObject pauseMenu, pauseBtn, scoreBackground;
+    [SerializeField] GameObject _pauseMenu, _pauseBtn, _scoreBackground;
 
     public void PauseGame()
     {
-        scoreBackground.SetActive(false);
-        pauseMenu.SetActive(true);
+        _scoreBackground.SetActive(false);
+        _pauseMenu.SetActive(true);
         Time.timeScale = 0;
     }
 
     public void ResumeGame()
     {
-        scoreBackground.SetActive(true);
-        pauseMenu.SetActive(false);
+        _scoreBackground.SetActive(true);
+        _pauseMenu.SetActive(false);
         Time.timeScale = 1;
     }
 }

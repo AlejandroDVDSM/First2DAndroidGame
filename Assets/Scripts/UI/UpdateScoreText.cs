@@ -5,22 +5,20 @@ using TMPro;
 
 public class UpdateScoreText : MonoBehaviour
 {
-    [SerializeField] GameObject scoreManagerGameObject;
-    ScoreManager scoreManagerScript;
-    int currentScore;
-    TextMeshProUGUI scoreText;
+    [SerializeField] ScoreManager _scoreManagerScript;
+    int _currentScore;
+    TextMeshProUGUI _scoreText;
 
     void Start()
     {
-        scoreText = gameObject.GetComponent<TextMeshProUGUI>();
-        scoreManagerScript = scoreManagerGameObject.GetComponent<ScoreManager>();
+        _scoreText = gameObject.GetComponent<TextMeshProUGUI>();
     }
 
 
     // Update is called once per frame
     void Update()
     {
-        currentScore = scoreManagerScript.Score;
-        scoreText.text = currentScore + " points";
+        _currentScore = _scoreManagerScript.Score;
+        _scoreText.text = _currentScore + " points";
     }
 }

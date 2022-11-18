@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class DragAndDrop : MonoBehaviour
 {
-    Collider2D myCollider;
+    Collider2D _myCollider;
 
-    Touch touch;
-    Vector2 touchPosition;
+    Touch _touch;
+    Vector2 _touchPosition;
 
-    bool moveAllowed;
-    PlayerBounds playerBounds;
+    bool _moveAllowed;
+    PlayerBounds _playerBounds;
 
     // Start is called before the first frame update
     void Start()
     {
-        myCollider = GetComponent<Collider2D>();
-        playerBounds = GetComponent<PlayerBounds>();
+        _myCollider = GetComponent<Collider2D>();
+        _playerBounds = GetComponent<PlayerBounds>();
     }
 
     // Update is called once per frame
@@ -24,22 +24,22 @@ public class DragAndDrop : MonoBehaviour
     {
         if (Input.touchCount > 0)
         {
-            touch = Input.GetTouch(0);
-            touchPosition = Camera.main.ScreenToWorldPoint(touch.position);
+            _touch = Input.GetTouch(0);
+            _touchPosition = Camera.main.ScreenToWorldPoint(_touch.position);
 
-            switch (touch.phase)
+            switch (_touch.phase)
             {
                 case TouchPhase.Began:
-                    Collider2D touchedCollider = Physics2D.OverlapPoint(touchPosition);
-                    if (myCollider == touchedCollider) moveAllowed = true;
+                    Collider2D touchedCollider = Physics2D.OverlapPoint(_touchPosition);
+                    if (_myCollider == touchedCollider) _moveAllowed = true;
                     break;
 
                 case TouchPhase.Moved:
-                    if (moveAllowed && playerBounds.IsInBounds(touchPosition.x)) transform.position = new Vector2(touchPosition.x, transform.position.y);
+                    if (_moveAllowed && _playerBounds.IsInBounds(_touchPosition.x)) transform.position = new Vector2(_touchPosition.x, transform.position.y);
                     break;
 
                 case TouchPhase.Ended:
-                    moveAllowed = false;
+                    _moveAllowed = false;
                     break;
             }
         }

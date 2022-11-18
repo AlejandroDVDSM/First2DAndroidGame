@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bae86d710e5e1d4d89a4706a5c5e5c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lowerLimit: -8
+  _lowerLimit: -8
 --- !u!114 &8487980204148850623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,4 +160,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 244288080d514ca4ead51bc6765db636, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  element: {fileID: 11400000, guid: 3f51bb724ac18a34d933a413f4756a3e, type: 2}
+  _element: {fileID: 11400000, guid: 3f51bb724ac18a34d933a413f4756a3e, type: 2}

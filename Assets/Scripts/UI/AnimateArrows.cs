@@ -3,27 +3,27 @@ using UnityEngine;
 
 public class AnimateArrows : MonoBehaviour
 {
-    bool timeToGetClose = true;
-    Vector3 velocity = Vector3.zero;
-    [SerializeField] float smoothTime = .5f;
+    bool _timeToGetClose = true;
+    Vector3 _velocity = Vector3.zero;
+    [SerializeField] float _smoothTime = .5f;
 
-    Vector3 originalPosition;
-    Vector3 targetPosition;
+    Vector3 _originalPosition;
+    Vector3 _targetPosition;
 
     // Start is called before the first frame update
     void Start()
     {
-        originalPosition = transform.position;
+        _originalPosition = transform.position;
 
         Vector3 auxPos = transform.position;
         auxPos.x -= 3f;
-        targetPosition = auxPos;
+        _targetPosition = auxPos;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (timeToGetClose)
+        if (_timeToGetClose)
         {
             GetCloserToTargetPosition();
         } else
@@ -34,22 +34,22 @@ public class AnimateArrows : MonoBehaviour
 
     void GetCloserToTargetPosition()
     {
-        transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
+        transform.position = Vector3.SmoothDamp(transform.position, _targetPosition, ref _velocity, _smoothTime);
 
         var currentPosX = Math.Round(transform.position.x, 2);
-        var targetPositionRoundedX = Math.Round(targetPosition.x, 2);
+        var targetPositionRoundedX = Math.Round(_targetPosition.x, 2);
 
-        if (currentPosX == targetPositionRoundedX) timeToGetClose = false;
+        if (currentPosX == targetPositionRoundedX) _timeToGetClose = false;
 
     }
     
     void MoveAwayFromTargetPosition()
     {
-        transform.position = Vector3.SmoothDamp(transform.position, originalPosition, ref velocity, smoothTime);
+        transform.position = Vector3.SmoothDamp(transform.position, _originalPosition, ref _velocity, _smoothTime);
 
         var currentPosX = Math.Round(transform.position.x, 2);
-        var originalPositionRoundedX = Math.Round(originalPosition.x, 2);
+        var originalPositionRoundedX = Math.Round(_originalPosition.x, 2);
 
-        if (currentPosX == originalPositionRoundedX) timeToGetClose = true;
+        if (currentPosX == originalPositionRoundedX) _timeToGetClose = true;
     }
 }

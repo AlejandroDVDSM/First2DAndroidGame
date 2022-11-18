@@ -4,23 +4,23 @@ using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
 {
-    private int score = 0;
+    int _score = 0;
 
-    public int Score { get => score; }
+    public int Score { get => _score; }
 
     public void AddScore(int scoreToAdd)
     {
-        score += scoreToAdd;
+        _score += scoreToAdd;
     }
 
     public void SubstractScore(int scoreToSubstract)
     {
-        if (score - scoreToSubstract > 0)
+        if (_score - scoreToSubstract > 0)
         {
-            score -= scoreToSubstract;
+            _score -= scoreToSubstract;
         } else
         {
-            score = 0;
+            _score = 0;
         }
     }
 }

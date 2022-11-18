@@ -406,7 +406,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0538f20cecbb09a4988ea508c000f6e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreManagerGameObject: {fileID: 1717225174}
+  _scoreManagerScript: {fileID: 1717225176}
 --- !u!1 &234983836
 GameObject:
   m_ObjectHideFlags: 0
@@ -458,7 +458,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0538f20cecbb09a4988ea508c000f6e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreManagerGameObject: {fileID: 1717225174}
+  _scoreManagerScript: {fileID: 1717225176}
 --- !u!114 &234983839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1715,9 +1715,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1db5ab7a374b1647aa163e333f35891, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMenu: {fileID: 360878767}
-  pauseBtn: {fileID: 1256267229}
-  scoreBackground: {fileID: 842670578}
+  _pauseMenu: {fileID: 360878767}
+  _pauseBtn: {fileID: 1256267229}
+  _scoreBackground: {fileID: 842670578}
 --- !u!1 &1595724487
 GameObject:
   m_ObjectHideFlags: 0
@@ -1747,19 +1747,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3914b3c0ba7eca04492baf8768f187f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minXAllowed: -3
-  maxXAllowed: 3
-  badElements:
+  _minXAllowed: -3
+  _maxXAllowed: 3
+  _badElements:
   - {fileID: 6178011883798931678, guid: 6cd603e311617d348ade0383951459bb, type: 3}
   - {fileID: 2212357283129642613, guid: 4e24852c1469adf419a7c59bcc3adda1, type: 3}
   - {fileID: 6115799305448721099, guid: ebcaff7b29d599e4e866a1d3ff1b9aa7, type: 3}
   - {fileID: 299939995292465011, guid: 3ff1ce1db91162242acc554117a5f8da, type: 3}
-  goodElements:
+  _goodElements:
   - {fileID: 7511263009860120772, guid: c80a3a2b769fdb548bf4ea305d362f2e, type: 3}
   - {fileID: 604218030987566542, guid: bc4aa23f9f3c0914699e3e3feb52f2c6, type: 3}
   - {fileID: 2628042849643565962, guid: c68b858bde769e64ea3793b54614abcc, type: 3}
   - {fileID: 3691537517366608982, guid: 8c43de0691b5e7e40a2bc79754bf63f4, type: 3}
-  upgrades:
+  _upgrades:
   - {fileID: 7620221787719349540, guid: 8d6f0b05a4c8c9b42b1f7e54101c42f8, type: 3}
   - {fileID: 5475321621816024953, guid: 11a852d7044c3564c886a44a1f3f95bd, type: 3}
   - {fileID: 1985497020586109415, guid: 7b226d188f227f24fbe5bffe8cd8a610, type: 3}
@@ -1930,7 +1930,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e538a43d4308d14f81347773a9868be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreManagerGameObject: {fileID: 1717225174}
+  _scoreManagerScript: {fileID: 1717225176}
 --- !u!1 &1717225174
 GameObject:
   m_ObjectHideFlags: 0

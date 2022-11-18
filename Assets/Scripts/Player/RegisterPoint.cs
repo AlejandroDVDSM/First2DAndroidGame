@@ -4,13 +4,7 @@ using UnityEngine;
 
 public class RegisterPoint : MonoBehaviour
 {
-    [SerializeField] GameObject scoreManagerGameObject;
-    ScoreManager scoreManagerScript;
-
-    void Start()
-    {
-        scoreManagerScript = scoreManagerGameObject.GetComponent<ScoreManager>();
-    }
+    [SerializeField] ScoreManager _scoreManagerScript;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -19,11 +13,11 @@ public class RegisterPoint : MonoBehaviour
         switch (collision.gameObject.tag)
         {
             case "BadElement":
-                scoreManagerScript.SubstractScore(score);
+                _scoreManagerScript.SubstractScore(score);
                 break;
 
             case "GoodElement":
-                scoreManagerScript.AddScore(score);
+                _scoreManagerScript.AddScore(score);
                 break;
 
             case "Upgrade":

@@ -146,4 +146,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bae86d710e5e1d4d89a4706a5c5e5c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lowerLimit: -8
+  _lowerLimit: -8

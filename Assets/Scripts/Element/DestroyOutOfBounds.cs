@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class DestroyOutOfBounds : MonoBehaviour
 {
-    [SerializeField] float lowerLimit;
+    [SerializeField] float _lowerLimit;
 
     private void Update()
     {
-        if (transform.position.y <= lowerLimit) Destroy(this.gameObject);
+        if (transform.position.y <= _lowerLimit) Destroy(this.gameObject);
     }
 }

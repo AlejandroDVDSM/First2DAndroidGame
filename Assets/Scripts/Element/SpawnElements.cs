@@ -2,12 +2,12 @@ using UnityEngine;
 
 public class SpawnElements : MonoBehaviour
 {
-    [SerializeField] float minXAllowed, maxXAllowed;
-    [SerializeField] GameObject[] badElements, goodElements, upgrades;
+    [SerializeField] float _minXAllowed, _maxXAllowed;
+    [SerializeField] GameObject[] _badElements, _goodElements, _upgrades;
 
-    float randomX;
-    Vector2 respawnPos;
-    int randomElement;
+    float _randomX;
+    Vector2 _respawnPos;
+    int _randomElement;
 
     void Start()
     {
@@ -16,9 +16,8 @@ public class SpawnElements : MonoBehaviour
 
     void SpawnElement()
     {
-        randomX = Random.Range(minXAllowed, maxXAllowed);
-        respawnPos = new Vector2(randomX, transform.position.y);
-        randomElement = Random.Range(0, badElements.Length);
+        _randomX = Random.Range(_minXAllowed, _maxXAllowed);
+        _respawnPos = new Vector2(_randomX, transform.position.y);
         int typeOfElement = Random.Range(-1, 2);
         ChooseElementToSpawn(typeOfElement);
     }
@@ -28,18 +27,18 @@ public class SpawnElements : MonoBehaviour
         switch (typeOfElement)
         {
             case -1:
-                randomElement = Random.Range(0, badElements.Length);
-                Instantiate(badElements[randomElement], respawnPos, transform.rotation);
+                _randomElement = Random.Range(0, _badElements.Length);
+                Instantiate(_badElements[_randomElement], _respawnPos, transform.rotation);
                 break;
 
             case 0:
-                randomElement = Random.Range(0, goodElements.Length);
-                Instantiate(goodElements[randomElement], respawnPos, transform.rotation);
+                _randomElement = Random.Range(0, _goodElements.Length);
+                Instantiate(_goodElements[_randomElement], _respawnPos, transform.rotation);
                 break;
 
             case 1:
-                randomElement = Random.Range(0, upgrades.Length);
-                Instantiate(upgrades[randomElement], respawnPos, transform.rotation);
+                _randomElement = Random.Range(0, _upgrades.Length);
+                Instantiate(_upgrades[_randomElement], _respawnPos, transform.rotation);
                 break;
         }
     }

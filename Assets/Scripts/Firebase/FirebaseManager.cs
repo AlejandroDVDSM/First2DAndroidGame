@@ -6,6 +6,9 @@ public class FirebaseManager : MonoBehaviour
 {
     FirebaseApp _app;
 
+    [SerializeField] GameObject _playContainer, _authContainer;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,9 +38,11 @@ public class FirebaseManager : MonoBehaviour
 
         if (auth.CurrentUser != null)
         {
+
             Debug.Log("{ " + auth.CurrentUser.UserId + " } user is already authenticated");
             return;
         }
+
         auth.SignInAnonymouslyAsync().ContinueWith(task => {
             if (task.IsCanceled)
             {

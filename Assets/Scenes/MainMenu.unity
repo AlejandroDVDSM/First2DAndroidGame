@@ -477,7 +477,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e170d3820008f442bf11b046f169392, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smoothTime: 0.5
+  _smoothTime: 0.5
 --- !u!1 &237109470
 GameObject:
   m_ObjectHideFlags: 0
@@ -904,7 +904,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e170d3820008f442bf11b046f169392, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smoothTime: 0.5
+  _smoothTime: 0.5
 --- !u!1 &387975960
 GameObject:
   m_ObjectHideFlags: 0
@@ -994,7 +994,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e170d3820008f442bf11b046f169392, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smoothTime: 0.5
+  _smoothTime: 0.5
 --- !u!1 &502113116
 GameObject:
   m_ObjectHideFlags: 0
@@ -1084,7 +1084,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e170d3820008f442bf11b046f169392, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smoothTime: 0.5
+  _smoothTime: 0.5
 --- !u!1 &557655725
 GameObject:
   m_ObjectHideFlags: 0
@@ -2539,7 +2539,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e170d3820008f442bf11b046f169392, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smoothTime: 0.5
+  _smoothTime: 0.5
 --- !u!1 &1262800475
 GameObject:
   m_ObjectHideFlags: 0
@@ -2629,7 +2629,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e170d3820008f442bf11b046f169392, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smoothTime: 0.5
+  _smoothTime: 0.5
 --- !u!1 &1406244432
 GameObject:
   m_ObjectHideFlags: 0
@@ -2981,6 +2981,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1a71f717d16edb499cb57c57808a7e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playContainer: {fileID: 0}
+  _authContainer: {fileID: 0}
 --- !u!4 &1472114334
 Transform:
   m_ObjectHideFlags: 0
@@ -4744,7 +4746,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e170d3820008f442bf11b046f169392, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smoothTime: 0.5
+  _smoothTime: 0.5
 --- !u!1 &2020725438
 GameObject:
   m_ObjectHideFlags: 0
@@ -4940,11 +4942,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 407a053ab04ede74195ed432923db790, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  titleGame: {fileID: 1870837594}
-  playContainer: {fileID: 1458927374}
-  quitButton: {fileID: 562755949}
-  scroll: {fileID: 1535330266}
-  explosions: {fileID: 823575414}
+  _titleGame: {fileID: 1870837594}
+  _playContainer: {fileID: 1458927374}
+  _quitButton: {fileID: 562755949}
+  _scroll: {fileID: 1535330266}
+  _explosions: {fileID: 823575414}
 --- !u!1 &2126175750
 GameObject:
   m_ObjectHideFlags: 0
@@ -5034,4 +5036,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e170d3820008f442bf11b046f169392, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smoothTime: 0.5
+  _smoothTime: 0.5

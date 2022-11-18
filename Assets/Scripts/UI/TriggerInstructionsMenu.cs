@@ -3,26 +3,26 @@ using UnityEngine;
 
 public class TriggerInstructionsMenu : MonoBehaviour
 {
-    [SerializeField] GameObject titleGame, playContainer, quitButton, scroll, explosions;
+    [SerializeField] GameObject _titleGame, _playContainer, _quitButton, _scroll, _explosions;
 
     public void TriggerInstructions()
     {
-        titleGame.SetActive(false);
-        playContainer.SetActive(false);
-        quitButton.SetActive(false);
-        explosions.SetActive(false);
+        _titleGame.SetActive(false);
+        _playContainer.SetActive(false);
+        _quitButton.SetActive(false);
+        _explosions.SetActive(false);
 
-        scroll.SetActive(true);
+        _scroll.SetActive(true);
     }
     
     public void HideInstructions()
     {
-        titleGame.SetActive(true);
-        playContainer.SetActive(true);
-        quitButton.SetActive(true);
-        explosions.SetActive(true);
+        _titleGame.SetActive(true);
+        _playContainer.SetActive(true);
+        _quitButton.SetActive(true);
+        _explosions.SetActive(true);
 
-        scroll.SetActive(false);
+        _scroll.SetActive(false);
     }
 
 }
