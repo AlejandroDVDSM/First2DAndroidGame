@@ -7,15 +7,9 @@ using TMPro;
 public class SetButtonInteractivity : MonoBehaviour
 {
 
-    [SerializeField] Button _confirmButton;
-    TMP_InputField _nameInputField;
+    [SerializeField] TMP_InputField _nameInputField;
     [SerializeField] GameObject _errorMessage;
-    
-    void Start()
-    {
-        _nameInputField =  GetComponent<TMP_InputField>();
-        
-    }
+    [SerializeField] Button _confirmButton;
 
     public void SetConfirmButtonInteractivity()
     {
@@ -32,7 +26,7 @@ public class SetButtonInteractivity : MonoBehaviour
         
     }
 
-    private bool CheckMinLength()
+    bool CheckMinLength()
     {
         if (_nameInputField.text.Length >= 3) return true;
 
