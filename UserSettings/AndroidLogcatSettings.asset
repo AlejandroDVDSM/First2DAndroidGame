@@ -11,12 +11,6 @@
         {
             "deviceId": "2b55da55",
             "name": "com.risingpixel.androidgame",
-            "processId": 27765,
-            "exited": true
-        },
-        {
-            "deviceId": "2b55da55",
-            "name": "com.risingpixel.androidgame",
             "processId": 28348,
             "exited": true
         },
@@ -30,6 +24,12 @@
             "deviceId": "2b55da55",
             "name": "com.risingpixel.androidgame",
             "processId": 29739,
+            "exited": true
+        },
+        {
+            "deviceId": "2b55da55",
+            "name": "com.risingpixel.androidgame",
+            "processId": 30342,
             "exited": true
         }
     ],

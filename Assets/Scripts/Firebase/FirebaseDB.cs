@@ -4,7 +4,6 @@ using UnityEngine;
 using TMPro;
 using Firebase.Database;
 using System;
-using Firebase.Extensions;
 
 public class FirebaseDB : MonoBehaviour
 {
@@ -33,53 +32,8 @@ public class FirebaseDB : MonoBehaviour
         _dbReference.Child("users").Child(_userID).SetRawJsonValueAsync(json);
     }
 
-   /* public void IsUserRegisteredInDB()
+    IEnumerator IsUserInDB(Action<bool> onCallback)
     {
-
-        FirebaseDatabase.DefaultInstance
-          .GetReference("users")
-          .GetValueAsync().ContinueWith(task => {
-              if (task.IsFaulted)
-              {
-                  Debug.LogError("GetUserID encountered an error: " + task.Exception);
-                  return;
-              }
-              else if (task.IsCompleted)
-              {
-                  DataSnapshot snapshot = task.Result;
-                  // Do something with snapshot...
-                  foreach (DataSnapshot user in snapshot.Children)
-                  {
-                      IDictionary dictUser = (IDictionary)user.Value;
-                      if (dictUser["userID"].ToString() == _userID)
-                      {
-                          Debug.Log(dictUser["userID"] + " - V");
-
-                          break;
-                      } else
-                      {
-                          Debug.Log(dictUser["userID"] + " - F");
-                      }
-
-                      //Debug.Log("" + dictUser["userID"] /*+ " - " + dictUser["userName"] + " - " + dictUser["userScore"]);
-                  }
-              }
-        });
-    }*/
-
-    IEnumerator GetUserIDCoroutine(Action<bool> onCallback)
-    {
-        /*var userIDData = _dbReference.Child("users").Child(_userID).Child("userID").GetValueAsync();
-
-        yield return new WaitUntil(predicate: () => userIDData.IsCompleted);
-
-        if (userIDData != null)
-        {
-            DataSnapshot snapshot = userIDData.Result;
-
-            onCallback.Invoke(snapshot.Value.ToString());
-        }*/
-
         var userData = _dbReference.Child("users").GetValueAsync();
         yield return new WaitUntil(predicate: () => userData.IsCompleted);
 
@@ -102,18 +56,19 @@ public class FirebaseDB : MonoBehaviour
         }
     }
 
-    public void HideAuthUI()
+    public void Authenticate()
     {
-        StartCoroutine(GetUserIDCoroutine((bool id) =>
+        StartCoroutine(IsUserInDB((bool userIsInDB) =>
         {
-            if (id)
+            if (userIsInDB)
             {
                 _playContainer.SetActive(true);
+                _authenticateContainer.SetActive(false);
             } else
             {
+                _playContainer.SetActive(false);
                 _authenticateContainer.SetActive(true);
             }
         }));
     }
-
 }

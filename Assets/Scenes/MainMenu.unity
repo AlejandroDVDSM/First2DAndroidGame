@@ -645,7 +645,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2027085777}
         m_TargetAssemblyTypeName: AuthUI, Assembly-CSharp
-        m_MethodName: HideAUthUI
+        m_MethodName: HideAuthUI
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

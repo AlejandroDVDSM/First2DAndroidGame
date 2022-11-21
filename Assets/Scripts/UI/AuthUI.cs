@@ -13,7 +13,7 @@ public class AuthUI : MonoBehaviour
 
     private void Start()
     {
-        _firebaseDB.HideAuthUI();
+        _firebaseDB.Authenticate();
     }
 
     public void SetConfirmButtonInteractivity()
