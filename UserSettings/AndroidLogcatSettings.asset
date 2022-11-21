@@ -11,18 +11,6 @@
         {
             "deviceId": "2b55da55",
             "name": "com.risingpixel.androidgame",
-            "processId": 28348,
-            "exited": true
-        },
-        {
-            "deviceId": "2b55da55",
-            "name": "com.risingpixel.androidgame",
-            "processId": 28708,
-            "exited": true
-        },
-        {
-            "deviceId": "2b55da55",
-            "name": "com.risingpixel.androidgame",
             "processId": 29739,
             "exited": true
         },
@@ -30,6 +18,18 @@
             "deviceId": "2b55da55",
             "name": "com.risingpixel.androidgame",
             "processId": 30342,
+            "exited": true
+        },
+        {
+            "deviceId": "2b55da55",
+            "name": "com.risingpixel.androidgame",
+            "processId": 31234,
+            "exited": true
+        },
+        {
+            "deviceId": "2b55da55",
+            "name": "com.risingpixel.androidgame",
+            "processId": 31781,
             "exited": true
         }
     ],
