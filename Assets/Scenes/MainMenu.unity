@@ -667,6 +667,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1472114335}
+        m_TargetAssemblyTypeName: FirebaseDB, Assembly-CSharp
+        m_MethodName: CreateUser
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &256758800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2316,7 +2328,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1132377378
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2986,6 +2998,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1472114334}
   - component: {fileID: 1472114333}
+  - component: {fileID: 1472114335}
   m_Layer: 0
   m_Name: FirebaseManager
   m_TagString: Untagged
@@ -3000,11 +3013,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1472114332}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c1a71f717d16edb499cb57c57808a7e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _triggerPlayContainer: {fileID: 2027085779}
 --- !u!4 &1472114334
 Transform:
   m_ObjectHideFlags: 0
@@ -3020,6 +3034,21 @@ Transform:
   m_Father: {fileID: 1414382804}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1472114335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1472114332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d32b4475e356564b9482582189a9a91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _userName: {fileID: 101826019}
+  _playContainer: {fileID: 1458927374}
+  _authenticateContainer: {fileID: 1132377377}
 --- !u!1 &1518619984
 GameObject:
   m_ObjectHideFlags: 0
@@ -4955,7 +4984,7 @@ MonoBehaviour:
   _authenticateContainer: {fileID: 1132377377}
   _playContainer: {fileID: 1458927374}
   _confirmButton: {fileID: 256758799}
-  _firebaseManager: {fileID: 1472114333}
+  _firebaseDB: {fileID: 1472114335}
 --- !u!114 &2027085778
 MonoBehaviour:
   m_ObjectHideFlags: 0

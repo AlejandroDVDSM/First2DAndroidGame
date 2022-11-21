@@ -10,9 +10,27 @@
     "m_KnownPackagesForSerialization": [
         {
             "deviceId": "2b55da55",
-            "name": "com.DefaultCompany.First2DAndroidGame",
-            "processId": 3435,
-            "exited": false
+            "name": "com.risingpixel.androidgame",
+            "processId": 27765,
+            "exited": true
+        },
+        {
+            "deviceId": "2b55da55",
+            "name": "com.risingpixel.androidgame",
+            "processId": 28348,
+            "exited": true
+        },
+        {
+            "deviceId": "2b55da55",
+            "name": "com.risingpixel.androidgame",
+            "processId": 28708,
+            "exited": true
+        },
+        {
+            "deviceId": "2b55da55",
+            "name": "com.risingpixel.androidgame",
+            "processId": 29739,
+            "exited": true
         }
     ],
     "m_Tags": {

@@ -9,17 +9,11 @@ public class AuthUI : MonoBehaviour
     [SerializeField] TMP_InputField _nameInputField;
     [SerializeField] GameObject _errorMessage, _authenticateContainer, _playContainer;
     [SerializeField] Button _confirmButton;
-    [SerializeField] FirebaseManager _firebaseManager;
+    [SerializeField] FirebaseDB _firebaseDB;
 
-    void Update()
+    private void Start()
     {
-        /*if (_firebaseManager.IsUserAuthenticated)
-        {
-            _playContainer.SetActive(true);
-        } else
-        {
-            _authenticateContainer.SetActive(false);
-        }*/
+        _firebaseDB.HideAuthUI();
     }
 
     public void SetConfirmButtonInteractivity()
@@ -42,7 +36,12 @@ public class AuthUI : MonoBehaviour
         return false;
     }
 
-    public void HideAUthUI()
+    public void HideAuthUI()
+    {
+        _authenticateContainer.SetActive(false);
+    }
+    
+    public void ShowAuthUI()
     {
         _authenticateContainer.SetActive(false);
     }

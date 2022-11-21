@@ -1,17 +1,16 @@
 using UnityEngine;
 using Firebase;
 using Firebase.Auth;
+using Firebase.Database;
 
 public class FirebaseManager : MonoBehaviour
 {
     FirebaseApp _app;
+    DatabaseReference _dbReference;
 
-    /*[SerializeField] TriggerPlayContainer _triggerPlayContainer;
-    [SerializeField] AuthUI _authUI;
-    [SerializeField] GameObject _playContainer;*/
-    bool _isUserAuthenticated = false;
-
-    public bool IsUserAuthenticated { get => _isUserAuthenticated; }
+    [SerializeField] TriggerPlayContainer _triggerPlayContainer;
+    //[SerializeField] AuthUI _authUI;
+    //[SerializeField] GameObject _playContainer;
 
     // Start is called before the first frame update
     void Start()
@@ -23,9 +22,9 @@ public class FirebaseManager : MonoBehaviour
                 // Create and hold a reference to your FirebaseApp,
                 // where app is a Firebase.FirebaseApp property of your application class.
                 _app = FirebaseApp.DefaultInstance;
-
+                _dbReference = FirebaseDatabase.DefaultInstance.RootReference;
                 // Set a flag here to indicate whether Firebase is ready to use by your app.
-                Login();
+                //Login();
             }
             else
             {
@@ -46,6 +45,7 @@ public class FirebaseManager : MonoBehaviour
             return;
         }
 
+
         auth.SignInAnonymouslyAsync().ContinueWith(task => {
             if (task.IsCanceled)
             {
@@ -59,21 +59,26 @@ public class FirebaseManager : MonoBehaviour
             }
 
             FirebaseUser newUser = task.Result;
-            Debug.LogFormat("User signed in successfully: {0} ({1})",
+            Debug.LogFormat("User signed in successfully: {0} { {1} }",
                 newUser.DisplayName, newUser.UserId);
+
         });
     }
 
-    bool IsUserLoggedIn()
+    public bool IsUserLoggedIn()
     {
         FirebaseAuth auth = FirebaseAuth.DefaultInstance;
-        if (auth.CurrentUser != null)
-        {
-            _isUserAuthenticated = true;
-            return true;
-        }
-
-        _isUserAuthenticated = false;
+        if (auth.CurrentUser != null) return true;
         return false;
+    }
+
+    void CreateUser(string userID, string userName)
+    {
+        
+        User newUser = new User(userID, userName, 0);
+        string json = JsonUtility.ToJson(newUser);
+
+        _dbReference.Child("users").Child(userID).SetRawJsonValueAsync(json);
+
     }
 }
