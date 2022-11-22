@@ -1,19 +1,13 @@
 {
     "m_SelectedDeviceId": "2b55da55",
     "m_SelectedPackage": {
-        "deviceId": "",
-        "name": "",
-        "processId": 0,
-        "exited": false
+        "deviceId": "2b55da55",
+        "name": "com.risingpixel.androidgame",
+        "processId": 12335,
+        "exited": true
     },
     "m_SelectedPriority": 0,
     "m_KnownPackagesForSerialization": [
-        {
-            "deviceId": "2b55da55",
-            "name": "com.risingpixel.androidgame",
-            "processId": 30342,
-            "exited": true
-        },
         {
             "deviceId": "2b55da55",
             "name": "com.risingpixel.androidgame",
@@ -30,6 +24,12 @@
             "deviceId": "2b55da55",
             "name": "com.risingpixel.androidgame",
             "processId": 4834,
+            "exited": true
+        },
+        {
+            "deviceId": "2b55da55",
+            "name": "com.risingpixel.androidgame",
+            "processId": 12335,
             "exited": true
         }
     ],
