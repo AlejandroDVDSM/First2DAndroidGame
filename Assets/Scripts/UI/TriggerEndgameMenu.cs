@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class TriggerEndgameMenu : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] GameObject _endgameMenu, _score;
+    AudioManager _audioManager;
+
     void Start()
     {
-        
+        _audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Endgame()
     {
-        
+        _audioManager.Stop("GameTheme");
+        Time.timeScale = 0;
+        _score.SetActive(false);
+        _endgameMenu.SetActive(true);
     }
 }

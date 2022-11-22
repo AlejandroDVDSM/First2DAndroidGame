@@ -4,26 +4,30 @@ using TMPro;
 public class Timer : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI _timerText;
-    TriggerPauseMenu _triggerPauseMenu;
-    private float _timeInSeconds = 11;
+    TriggerEndgameMenu _triggerEndgameMenu;
+    private float _timeInSeconds = 60;
 
     void Start()
     {
-        _triggerPauseMenu = GetComponent<TriggerPauseMenu>();
+        _triggerEndgameMenu = GetComponent<TriggerEndgameMenu>();
     }
 
     void Update()
     {
-        if (_timeInSeconds > 0) _timeInSeconds -= Time.deltaTime;
+        if (_timeInSeconds > 0)
+        {
+            _timeInSeconds -= Time.deltaTime;
+            DisplayTime(_timeInSeconds);
+        }
+
         if (_timeInSeconds < 10) _timerText.color = Color.red;
-        DisplayTime(_timeInSeconds);
     }
 
     void DisplayTime(float timeToDisplay)
     {
         if (timeToDisplay < 0)
         {
-            _triggerPauseMenu.PauseGame();
+            _triggerEndgameMenu.Endgame();
             timeToDisplay = 0;
         }
 

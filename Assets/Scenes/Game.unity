@@ -638,7 +638,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 340.99994}
-  m_SizeDelta: {x: 1200, y: 450}
+  m_SizeDelta: {x: 1100, y: 450}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &265495634
 MonoBehaviour:
@@ -772,7 +772,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 778.99994}
-  m_SizeDelta: {x: 1200, y: 450}
+  m_SizeDelta: {x: 1100, y: 450}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &310762316
 MonoBehaviour:
@@ -818,10 +818,22 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1928370983}
         m_TargetAssemblyTypeName: SceneController, Assembly-CSharp
         m_MethodName: LoadScene
         m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: MainMenu
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1928370984}
+        m_TargetAssemblyTypeName: ResetTimeScale, Assembly-CSharp
+        m_MethodName: RestartTimeScale
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1554,7 +1566,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -76}
-  m_SizeDelta: {x: 1200, y: 450}
+  m_SizeDelta: {x: 1300, y: 450}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &709310548
 MonoBehaviour:
@@ -2447,6 +2459,7 @@ GameObject:
   - component: {fileID: 1171578655}
   - component: {fileID: 1171578656}
   - component: {fileID: 1171578657}
+  - component: {fileID: 1171578658}
   m_Layer: 0
   m_Name: UIManager
   m_TagString: Untagged
@@ -2497,6 +2510,20 @@ MonoBehaviour:
   _pauseMenu: {fileID: 360878767}
   _pauseBtn: {fileID: 1256267229}
   _scoreBackground: {fileID: 842670578}
+--- !u!114 &1171578658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1171578654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0d8ef8b7d24b1743ac3cd44fb640a39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _endgameMenu: {fileID: 406818701}
+  _score: {fileID: 842670578}
 --- !u!1 &1256267229
 GameObject:
   m_ObjectHideFlags: 0
@@ -2714,7 +2741,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1928370982}
         m_TargetAssemblyTypeName: QuitApplication, Assembly-CSharp
         m_MethodName: Quit
         m_Mode: 1
@@ -3057,10 +3084,6 @@ MonoBehaviour:
   - {fileID: 604218030987566542, guid: bc4aa23f9f3c0914699e3e3feb52f2c6, type: 3}
   - {fileID: 2628042849643565962, guid: c68b858bde769e64ea3793b54614abcc, type: 3}
   - {fileID: 3691537517366608982, guid: 8c43de0691b5e7e40a2bc79754bf63f4, type: 3}
-  _upgrades:
-  - {fileID: 7620221787719349540, guid: 8d6f0b05a4c8c9b42b1f7e54101c42f8, type: 3}
-  - {fileID: 5475321621816024953, guid: 11a852d7044c3564c886a44a1f3f95bd, type: 3}
-  - {fileID: 1985497020586109415, guid: 7b226d188f227f24fbe5bffe8cd8a610, type: 3}
 --- !u!4 &1595724489
 Transform:
   m_ObjectHideFlags: 0
@@ -3446,7 +3469,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -526}
-  m_SizeDelta: {x: 1300, y: 450}
+  m_SizeDelta: {x: 1350, y: 450}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1798524479
 MonoBehaviour:
@@ -3811,6 +3834,7 @@ GameObject:
   - component: {fileID: 1928370981}
   - component: {fileID: 1928370983}
   - component: {fileID: 1928370982}
+  - component: {fileID: 1928370984}
   m_Layer: 0
   m_Name: SceneManager
   m_TagString: Untagged
@@ -3855,6 +3879,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d5373cde833b8d5428725b46f8a43573, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1928370984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1928370980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f28baa3b4c425fe478c35182cdeaaa70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2000597267
@@ -4158,10 +4194,22 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1928370983}
         m_TargetAssemblyTypeName: SceneController, Assembly-CSharp
         m_MethodName: LoadScene
         m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Game
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1928370984}
+        m_TargetAssemblyTypeName: ResetTimeScale, Assembly-CSharp
+        m_MethodName: RestartTimeScale
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

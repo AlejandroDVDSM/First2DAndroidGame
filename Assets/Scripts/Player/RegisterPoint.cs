@@ -5,6 +5,11 @@ using UnityEngine;
 public class RegisterPoint : MonoBehaviour
 {
     [SerializeField] ScoreManager _scoreManagerScript;
+    AudioManager _audioManager;
+    private void Start()
+    {
+        _audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -17,12 +22,13 @@ public class RegisterPoint : MonoBehaviour
                 break;
 
             case "GoodElement":
+                _audioManager.Play("EarnPoint");
                 _scoreManagerScript.AddScore(score);
                 break;
 
-            case "Upgrade":
+            /*case "Upgrade":
                 Debug.Log(collision.gameObject.name);
-                break;
+                break;*/
         }
 
         Destroy(collision.gameObject);
