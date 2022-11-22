@@ -8,15 +8,10 @@ using System;
 public class FirebaseDB : MonoBehaviour
 {
     [SerializeField] TMP_InputField _userName;
-    /*[SerializeField] AuthUI _authUI;
-    [SerializeField] TriggerPlayContainer _triggerPlayContainer;*/
     [SerializeField] GameObject _playContainer, _authenticateContainer;
 
     DatabaseReference _dbReference;
     string _userID;
-    bool _userIsRegistered;
-
-    public string UserID { get => _userID; }
 
     void Start()
     {
@@ -30,6 +25,7 @@ public class FirebaseDB : MonoBehaviour
         string json = JsonUtility.ToJson(newUser);
 
         _dbReference.Child("users").Child(_userID).SetRawJsonValueAsync(json);
+        Debug.LogFormat("New user created: {0}, {1}", _userName.text, _userID);
     }
 
     IEnumerator IsUserInDB(Action<bool> onCallback)
@@ -64,10 +60,12 @@ public class FirebaseDB : MonoBehaviour
             {
                 _playContainer.SetActive(true);
                 _authenticateContainer.SetActive(false);
+                Debug.LogFormat("User authenticated: {0}", _userID);
             } else
             {
                 _playContainer.SetActive(false);
                 _authenticateContainer.SetActive(true);
+                Debug.Log("Waiting for user to register...");
             }
         }));
     }

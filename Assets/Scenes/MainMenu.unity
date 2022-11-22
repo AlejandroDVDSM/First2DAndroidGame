@@ -2997,7 +2997,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1472114334}
-  - component: {fileID: 1472114333}
   - component: {fileID: 1472114335}
   m_Layer: 0
   m_Name: FirebaseManager
@@ -3006,19 +3005,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1472114333
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1472114332}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1a71f717d16edb499cb57c57808a7e6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _triggerPlayContainer: {fileID: 2027085779}
 --- !u!4 &1472114334
 Transform:
   m_ObjectHideFlags: 0
@@ -5105,3 +5091,60 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _smoothTime: 0.5
+--- !u!1001 &1961054351569024937
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3306955265220087189, guid: 074da4c8f2799814ca975d18230bacb1, type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 3486561434302905666, guid: 074da4c8f2799814ca975d18230bacb1, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3486561434302905666, guid: 074da4c8f2799814ca975d18230bacb1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 111.53602
+      objectReference: {fileID: 0}
+    - target: {fileID: 3486561434302905666, guid: 074da4c8f2799814ca975d18230bacb1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 174.40953
+      objectReference: {fileID: 0}
+    - target: {fileID: 3486561434302905666, guid: 074da4c8f2799814ca975d18230bacb1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.1326504
+      objectReference: {fileID: 0}
+    - target: {fileID: 3486561434302905666, guid: 074da4c8f2799814ca975d18230bacb1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3486561434302905666, guid: 074da4c8f2799814ca975d18230bacb1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3486561434302905666, guid: 074da4c8f2799814ca975d18230bacb1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3486561434302905666, guid: 074da4c8f2799814ca975d18230bacb1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3486561434302905666, guid: 074da4c8f2799814ca975d18230bacb1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3486561434302905666, guid: 074da4c8f2799814ca975d18230bacb1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3486561434302905666, guid: 074da4c8f2799814ca975d18230bacb1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 074da4c8f2799814ca975d18230bacb1, type: 3}

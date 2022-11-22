@@ -4,8 +4,13 @@ using TMPro;
 public class Timer : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI _timerText;
+    TriggerPauseMenu _triggerPauseMenu;
+    private float _timeInSeconds = 11;
 
-    private float _timeInSeconds = 13;
+    void Start()
+    {
+        _triggerPauseMenu = GetComponent<TriggerPauseMenu>();
+    }
 
     void Update()
     {
@@ -16,7 +21,11 @@ public class Timer : MonoBehaviour
 
     void DisplayTime(float timeToDisplay)
     {
-        if (timeToDisplay < 0) timeToDisplay = 0;
+        if (timeToDisplay < 0)
+        {
+            _triggerPauseMenu.PauseGame();
+            timeToDisplay = 0;
+        }
 
         float minutes = Mathf.FloorToInt(timeToDisplay / 60);
         float seconds = Mathf.FloorToInt(timeToDisplay % 60);
