@@ -63,3 +63,15 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: EarnPoint
+    clip: {fileID: 8300000, guid: 51e159ed6cbd0e4449072187192d00c5, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: LosePoint
+    clip: {fileID: 8300000, guid: 73ba303d29c419340b578b1b60abc430, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}

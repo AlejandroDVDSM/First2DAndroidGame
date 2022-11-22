@@ -18,6 +18,7 @@ public class RegisterPoint : MonoBehaviour
         switch (collision.gameObject.tag)
         {
             case "BadElement":
+                _audioManager.Play("LosePoint");
                 _scoreManagerScript.SubstractScore(score);
                 break;
 
