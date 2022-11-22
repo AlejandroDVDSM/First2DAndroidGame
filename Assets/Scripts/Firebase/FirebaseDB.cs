@@ -36,17 +36,18 @@ public class FirebaseDB : MonoBehaviour
         if (userData != null)
         {
             DataSnapshot snapshot = userData.Result;
-
+            var userIsInDB = false;
             foreach (DataSnapshot user in snapshot.Children)
             {
                 IDictionary dictUser = (IDictionary)user.Value;
                 if (dictUser["userID"].ToString() == _userID)
                 {
-                    onCallback.Invoke(true);
+                    userIsInDB = true;
+                    onCallback.Invoke(userIsInDB);
                     break;
                 } else
                 {
-                    onCallback.Invoke(false);
+                    onCallback.Invoke(userIsInDB);
                 }
             }
         }
