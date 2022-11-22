@@ -1586,12 +1586,12 @@ GameObject:
   - component: {fileID: 709310549}
   - component: {fileID: 709310548}
   m_Layer: 5
-  m_Name: ShareBtn
+  m_Name: ShareScoreBtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &709310547
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2582,6 +2582,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _endgameMenu: {fileID: 406818701}
   _score: {fileID: 842670578}
+  _shareScoreBtn: {fileID: 709310546}
+  _scoreManager: {fileID: 1717225176}
 --- !u!1 &1256267229
 GameObject:
   m_ObjectHideFlags: 0

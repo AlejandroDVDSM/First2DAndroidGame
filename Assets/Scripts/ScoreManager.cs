@@ -23,4 +23,14 @@ public class ScoreManager : MonoBehaviour
             _score = 0;
         }
     }
+
+    public void SaveMaxScore()
+    {
+        PlayerPrefs.SetInt("userMaxScore", _score);
+    }
+
+    public int GetMaxScore()
+    {
+        return PlayerPrefs.GetInt("userMaxScore");
+    }
 }
