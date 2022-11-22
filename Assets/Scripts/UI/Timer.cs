@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
@@ -7,13 +5,12 @@ public class Timer : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI _timerText;
 
-    private float _timeInSeconds = 3;
+    private float _timeInSeconds = 13;
 
     void Update()
     {
-
         if (_timeInSeconds > 0) _timeInSeconds -= Time.deltaTime;
-
+        if (_timeInSeconds < 10) _timerText.color = Color.red;
         DisplayTime(_timeInSeconds);
     }
 
