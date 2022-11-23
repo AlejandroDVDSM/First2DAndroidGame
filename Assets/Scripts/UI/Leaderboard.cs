@@ -13,10 +13,10 @@ public class Leaderboard : MonoBehaviour
     void Start()
     {
         _dbReference = FirebaseDatabase.DefaultInstance.RootReference;
-        CallMe();
+        SetLeaderboardContent();
     }
 
-    IEnumerator SetLeaderboardContent()
+    IEnumerator SetLeaderboardContentCoroutine()
     {
         var userData = _dbReference.Child("users").OrderByChild("userScore").GetValueAsync();
         yield return new WaitUntil(predicate: () => userData.IsCompleted);
@@ -52,13 +52,8 @@ public class Leaderboard : MonoBehaviour
         }
     }
 
-    void CallMe()
+    void SetLeaderboardContent()
     {
-        /*User newUser = new User("test", "test", 2);
-        string json = JsonUtility.ToJson(newUser);
-
-        _dbReference.Child("users").Child("test").SetRawJsonValueAsync(json);*/
-
-        StartCoroutine(SetLeaderboardContent());
+        StartCoroutine(SetLeaderboardContentCoroutine());
     }
 }
