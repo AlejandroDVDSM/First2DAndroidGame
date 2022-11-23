@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TriggerEndgameMenu : MonoBehaviour
 {
-    [SerializeField] GameObject _endgameMenu, _score, _shareScoreBtn, _recordMessage;
+    [SerializeField] GameObject _endgameMenu, _score, _shareScoreBtn, _recordMessage, _shareMessage;
     AudioManager _audioManager;
     [SerializeField] ScoreManager _scoreManager;
 
@@ -34,5 +34,10 @@ public class TriggerEndgameMenu : MonoBehaviour
     {
         _recordMessage.SetActive(false);
         _shareScoreBtn.SetActive(true);
+    }
+
+    public void ShowShareMessage()
+    {
+        _shareMessage.SetActive(true);
     }
 }
