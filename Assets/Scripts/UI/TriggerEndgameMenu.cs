@@ -13,18 +13,19 @@ public class TriggerEndgameMenu : MonoBehaviour
         _audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
     }
 
+
     public void Endgame()
     {
         _audioManager.Stop("GameTheme");
+        _audioManager.Play("MainMenuTheme");
         Time.timeScale = 0;
         _score.SetActive(false);
         _endgameMenu.SetActive(true);
 
         var currentScore = _scoreManager.Score;
-
         if (currentScore > _scoreManager.GetMaxScore())
         {
-            _scoreManager.SaveMaxScore();
+            _scoreManager.SetMaxScore();
             EnableShareScoreBtn();
         }
     }

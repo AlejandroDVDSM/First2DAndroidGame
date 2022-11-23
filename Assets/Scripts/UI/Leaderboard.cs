@@ -9,21 +9,14 @@ public class Leaderboard : MonoBehaviour
     [SerializeField] GameObject _row, _content;
 
     DatabaseReference _dbReference;
-    string _userID;
 
     void Start()
     {
-        _userID = SystemInfo.deviceUniqueIdentifier;
         _dbReference = FirebaseDatabase.DefaultInstance.RootReference;
         CallMe();
     }
 
-    void Update()
-    {
-        
-    }
-
-    IEnumerator GetScore()
+    IEnumerator SetLeaderboardContent()
     {
         var userData = _dbReference.Child("users").OrderByChild("userScore").GetValueAsync();
         yield return new WaitUntil(predicate: () => userData.IsCompleted);
@@ -40,10 +33,8 @@ public class Leaderboard : MonoBehaviour
 
             for (var i = snapshot.ChildrenCount - 1; i >= 0; i--)
             {
-                Debug.Log( ((Dictionary<string, object>)snapshotsList[(int)i].Value)["userName"] + " - " + ((Dictionary<string, object>)snapshotsList[(int)i].Value)["userScore"]);
-
                 var newRow = Instantiate(_row, newRowPos, _row.transform.rotation, _content.transform);
-                newRowPos.y -= 20;
+                newRowPos.y -= 100;
 
                 newRow.name = _row.name + "-" + rank;
 
@@ -68,6 +59,6 @@ public class Leaderboard : MonoBehaviour
 
         _dbReference.Child("users").Child("test").SetRawJsonValueAsync(json);*/
 
-        StartCoroutine(GetScore());
+        StartCoroutine(SetLeaderboardContent());
     }
 }
