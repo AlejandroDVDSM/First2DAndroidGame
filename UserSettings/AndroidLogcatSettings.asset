@@ -3,8 +3,8 @@
     "m_SelectedPackage": {
         "deviceId": "2b55da55",
         "name": "com.risingpixel.androidgame",
-        "processId": 12335,
-        "exited": true
+        "processId": 15977,
+        "exited": false
     },
     "m_SelectedPriority": 0,
     "m_KnownPackagesForSerialization": [
@@ -31,6 +31,12 @@
             "name": "com.risingpixel.androidgame",
             "processId": 12335,
             "exited": true
+        },
+        {
+            "deviceId": "2b55da55",
+            "name": "com.risingpixel.androidgame",
+            "processId": 15977,
+            "exited": false
         }
     ],
     "m_Tags": {
