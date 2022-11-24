@@ -16,7 +16,6 @@ public class LocateSelector : MonoBehaviour
         StartCoroutine(SetLocale(_languagueDropdown.value));
     }
 
-
     IEnumerator SetLocale(int localeID)
     {
         _active = true;
