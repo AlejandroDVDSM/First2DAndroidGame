@@ -451,6 +451,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _scoreManagerScript: {fileID: 1717225176}
+  _localStringScore:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  _scoreText: {fileID: 0}
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &234983836
 GameObject:
   m_ObjectHideFlags: 0
@@ -503,6 +516,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _scoreManagerScript: {fileID: 1717225176}
+  _localStringScore:
+    m_TableReference:
+      m_TableCollectionName: GUID:f3c586508c69d99409998fe3cefe13a8
+    m_TableEntryReference:
+      m_KeyId: 16188856094720
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  _scoreText: {fileID: 234983839}
+  references:
+    version: 2
+    RefIds: []
 --- !u!114 &234983839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3078,6 +3104,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _scoreManagerScript: {fileID: 1717225176}
+  _localStringScore:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  _scoreText: {fileID: 0}
+  references:
+    version: 2
+    RefIds: []
 --- !u!114 &1381929745
 MonoBehaviour:
   m_ObjectHideFlags: 0
