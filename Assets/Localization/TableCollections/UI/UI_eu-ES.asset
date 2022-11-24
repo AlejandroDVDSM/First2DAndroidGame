@@ -68,6 +68,30 @@ MonoBehaviour:
     m_Localized: Saiatu berriro
     m_Metadata:
       m_Items: []
+  - m_Id: 19755675439104
+    m_Localized: Partekatu puntuazioa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30051462828032
+    m_Localized: Saiatu berriro zure errekorra gainditzeko eta besteekin partekatzeko!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31610636619776
+    m_Localized: Zure diskoa partekatu da!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32190012608512
+    m_Localized: Aurkeztu zure izena...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32556531863552
+    m_Localized: Berretsi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36207434420224
+    m_Localized: Izenak hiru karaktere edo gehiago izan behar ditu
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

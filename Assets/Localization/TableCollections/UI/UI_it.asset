@@ -68,6 +68,30 @@ MonoBehaviour:
     m_Localized: Ritentare
     m_Metadata:
       m_Items: []
+  - m_Id: 19755675439104
+    m_Localized: Punteggio della quota
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30051462828032
+    m_Localized: Riprovate a battere il vostro record e condividetelo con gli altri!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31610636619776
+    m_Localized: "Il tuo record \xE8 stato condiviso!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32190012608512
+    m_Localized: Inserisci il tuo nome...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32556531863552
+    m_Localized: Confermare
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36207434420224
+    m_Localized: "Il nome deve contenere tre o pi\xF9 caratteri"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

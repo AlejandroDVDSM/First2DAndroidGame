@@ -67,6 +67,26 @@ MonoBehaviour:
     m_Key: share_score
     m_Metadata:
       m_Items: []
+  - m_Id: 30051462828032
+    m_Key: record_message
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31610636619776
+    m_Key: share_message
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32190012608512
+    m_Key: name_input_placeholder
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32556531863552
+    m_Key: confirm
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36207434420224
+    m_Key: error_message
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

@@ -68,6 +68,31 @@ MonoBehaviour:
     m_Localized: Tentar novamente
     m_Metadata:
       m_Items: []
+  - m_Id: 19755675439104
+    m_Localized: "Partilhar pontua\xE7\xE3o"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30051462828032
+    m_Localized: "Tente novamente para que possa bater o seu recorde e partilh\xE1-lo
+      com outros!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31610636619776
+    m_Localized: O seu registo foi partilhado!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32190012608512
+    m_Localized: Introduza o seu nome...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32556531863552
+    m_Localized: Confirmar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36207434420224
+    m_Localized: "O nome deve conter tr\xEAs ou mais caracteres"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

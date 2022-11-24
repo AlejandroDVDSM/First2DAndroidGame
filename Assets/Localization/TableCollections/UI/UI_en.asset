@@ -72,6 +72,26 @@ MonoBehaviour:
     m_Localized: Share score
     m_Metadata:
       m_Items: []
+  - m_Id: 30051462828032
+    m_Localized: Try it again so you can beat your record and share it with others!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31610636619776
+    m_Localized: Your record has been shared!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32190012608512
+    m_Localized: Enter your name...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32556531863552
+    m_Localized: Confirm
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36207434420224
+    m_Localized: Name must contain three or more characters
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

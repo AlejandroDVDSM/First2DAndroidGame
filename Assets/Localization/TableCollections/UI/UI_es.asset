@@ -72,6 +72,27 @@ MonoBehaviour:
     m_Localized: "Compartir puntuaci\xF3n"
     m_Metadata:
       m_Items: []
+  - m_Id: 30051462828032
+    m_Localized: "\xA1Int\xE9ntalo otra vez para batir tu r\xE9cord y as\xED poderlo
+      compartir con otros!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31610636619776
+    m_Localized: "\xA1Tu r\xE9cord ha sido compartido!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32190012608512
+    m_Localized: Introduce tu nombre...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32556531863552
+    m_Localized: Confirmar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36207434420224
+    m_Localized: "El nombre debe contener tres o m\xE1s caracteres"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

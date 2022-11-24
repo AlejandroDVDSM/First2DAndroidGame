@@ -68,6 +68,31 @@ MonoBehaviour:
     m_Localized: Reintentar
     m_Metadata:
       m_Items: []
+  - m_Id: 19755675439104
+    m_Localized: "Compartir puntuaci\xF3"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30051462828032
+    m_Localized: "Intenta-ho una altra vegada per batre el teu r\xE8cord i aix\xED
+      poder-ho compartir amb els altres!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31610636619776
+    m_Localized: "El teu r\xE8cord ha estat compartit!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32190012608512
+    m_Localized: Introdueix el teu nom...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32556531863552
+    m_Localized: Confirmar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36207434420224
+    m_Localized: "El nom ha de contenir tres o m\xE9s car\xE0cters"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:

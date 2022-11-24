@@ -68,6 +68,31 @@ MonoBehaviour:
     m_Localized: Retenter
     m_Metadata:
       m_Items: []
+  - m_Id: 19755675439104
+    m_Localized: Partager le score
+    m_Metadata:
+      m_Items: []
+  - m_Id: 30051462828032
+    m_Localized: "Essayez \xE0 nouveau pour battre votre record et le partager avec
+      d'autres!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31610636619776
+    m_Localized: "Votre dossier a \xE9t\xE9 partag\xE9!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32190012608512
+    m_Localized: Entrez votre nom...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 32556531863552
+    m_Localized: Confirmer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36207434420224
+    m_Localized: "Le nom doit contenir trois caract\xE8res ou plus"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds:
