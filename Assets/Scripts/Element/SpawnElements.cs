@@ -7,35 +7,42 @@ public class SpawnElements : MonoBehaviour
 
     float _randomX;
     Vector2 _respawnPos;
-    int _randomElement;
+
+    int _randomTypeOfElement;
+    float _randomSpeed;
 
     void Start()
     {
-        InvokeRepeating("SpawnElement", 1.0f, 1.65f);
+        InvokeRepeating("SpawnElement", .5f, 1.5f);
     }
 
     void SpawnElement()
     {
-        _randomX = Random.Range(_minXAllowed, _maxXAllowed);
-        _respawnPos = new Vector2(_randomX, transform.position.y);
-        int typeOfElement = Random.Range(-1, 1);
-        ChooseElementToSpawn(typeOfElement);
+        SetRandomValues();
+        switch (_randomTypeOfElement)
+        {
+            case 0:
+                var randomBadElementIndex = Random.Range(0, _badElements.Length);
+                var badElement = Instantiate(_badElements[randomBadElementIndex], _respawnPos, transform.rotation);
+                badElement.GetComponent<Rigidbody2D>().gravityScale = _randomSpeed;
+                break;
+
+            case 1:
+                var randomGoodElementIndex = Random.Range(0, _goodElements.Length);
+                var goodElement = Instantiate(_goodElements[randomGoodElementIndex], _respawnPos, transform.rotation);
+                goodElement.GetComponent<Rigidbody2D>().gravityScale = _randomSpeed;
+                break;
+
+        }
     }
 
-    void ChooseElementToSpawn(int typeOfElement)
+    void SetRandomValues()
     {
-        switch (typeOfElement)
-        {
-            case -1:
-                _randomElement = Random.Range(0, _badElements.Length);
-                var badElement = Instantiate(_badElements[_randomElement], _respawnPos, transform.rotation);
-                break;
+        _randomX = Random.Range(_minXAllowed, _maxXAllowed);
+        _respawnPos = new Vector2(_randomX, transform.position.y);
 
-            case 0:
-                _randomElement = Random.Range(0, _goodElements.Length);
-                var goodElement = Instantiate(_goodElements[_randomElement], _respawnPos, transform.rotation);
-                goodElement.GetComponent<Rigidbody2D>().gravityScale = .9f;
-                break;
-        }
+        _randomTypeOfElement = Random.Range(0, 2);
+
+        _randomSpeed = Random.Range(0.1f, 1.0f);
     }
 }

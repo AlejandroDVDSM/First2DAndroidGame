@@ -356,7 +356,7 @@ GameObject:
   - component: {fileID: 207965260}
   - component: {fileID: 207965262}
   m_Layer: 5
-  m_Name: Score
+  m_Name: Points
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -518,7 +518,7 @@ GameObject:
   - component: {fileID: 234983839}
   - component: {fileID: 234983838}
   m_Layer: 5
-  m_Name: Score
+  m_Name: Points
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2363,7 +2363,7 @@ GameObject:
   - component: {fileID: 842670581}
   - component: {fileID: 842670580}
   m_Layer: 5
-  m_Name: ScoreBackground
+  m_Name: PointsBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3563,7 +3563,7 @@ GameObject:
   - component: {fileID: 1381929745}
   - component: {fileID: 1381929744}
   m_Layer: 5
-  m_Name: Score
+  m_Name: Points
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3604,14 +3604,14 @@ MonoBehaviour:
   _scoreManagerScript: {fileID: 1717225176}
   _localStringScore:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:f3c586508c69d99409998fe3cefe13a8
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 16188856094720
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
-  _scoreText: {fileID: 0}
+  _scoreText: {fileID: 1381929745}
   references:
     version: 2
     RefIds: []
