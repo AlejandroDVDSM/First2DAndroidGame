@@ -43,6 +43,6 @@ public class SpawnElements : MonoBehaviour
 
         _randomTypeOfElement = Random.Range(0, 2);
 
-        _randomSpeed = Random.Range(0.1f, 1.0f);
+        _randomSpeed = Random.Range(.2f, .8f);
     }
 }
