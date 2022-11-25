@@ -28,7 +28,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 6339216822272
-    m_Localized: "Taula de classificaci\xF3"
+    m_Localized: Classificacions
     m_Metadata:
       m_Items: []
   - m_Id: 7104559861760
@@ -44,7 +44,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 11292027146240
-    m_Localized: "Classificaci\xF3"
+    m_Localized: Rang
     m_Metadata:
       m_Items: []
   - m_Id: 12373041893376
@@ -52,7 +52,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 14482483204096
-    m_Localized: "Puntuaci\xF3"
+    m_Localized: Punts
     m_Metadata:
       m_Items: []
   - m_Id: 15634931142656
@@ -69,7 +69,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19755675439104
-    m_Localized: "Compartir puntuaci\xF3"
+    m_Localized: Compartir
     m_Metadata:
       m_Items: []
   - m_Id: 30051462828032

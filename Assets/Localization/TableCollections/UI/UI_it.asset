@@ -52,7 +52,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 14482483204096
-    m_Localized: Punteggiatura
+    m_Localized: Punti
     m_Metadata:
       m_Items: []
   - m_Id: 15634931142656
@@ -69,7 +69,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19755675439104
-    m_Localized: Punteggio della quota
+    m_Localized: Condividi
     m_Metadata:
       m_Items: []
   - m_Id: 30051462828032

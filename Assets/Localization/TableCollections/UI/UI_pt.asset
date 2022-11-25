@@ -28,7 +28,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 6339216822272
-    m_Localized: "Quadro de l\xEDderes"
+    m_Localized: "Classifica\xE7\xF5es"
     m_Metadata:
       m_Items: []
   - m_Id: 7104559861760
@@ -52,7 +52,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 14482483204096
-    m_Localized: "Marca\xE7\xE3o"
+    m_Localized: Pontos
     m_Metadata:
       m_Items: []
   - m_Id: 15634931142656
@@ -69,7 +69,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 19755675439104
-    m_Localized: "Partilhar pontua\xE7\xE3o"
+    m_Localized: Partilhar
     m_Metadata:
       m_Items: []
   - m_Id: 30051462828032
