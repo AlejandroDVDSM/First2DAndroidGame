@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "2b55da55",
         "name": "com.risingpixel.androidgame",
-        "processId": 8732,
+        "processId": 11227,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -13,18 +13,6 @@
             "name": "com.miui.home",
             "processId": 2157,
             "exited": false
-        },
-        {
-            "deviceId": "2b55da55",
-            "name": "com.risingpixel.androidgame",
-            "processId": 5579,
-            "exited": true
-        },
-        {
-            "deviceId": "2b55da55",
-            "name": "com.risingpixel.androidgame",
-            "processId": 5906,
-            "exited": true
         },
         {
             "deviceId": "2b55da55",
@@ -42,6 +30,24 @@
             "deviceId": "2b55da55",
             "name": "com.risingpixel.androidgame",
             "processId": 8732,
+            "exited": true
+        },
+        {
+            "deviceId": "2b55da55",
+            "name": "com.risingpixel.androidgame",
+            "processId": 9116,
+            "exited": true
+        },
+        {
+            "deviceId": "2b55da55",
+            "name": "com.risingpixel.androidgame",
+            "processId": 10749,
+            "exited": false
+        },
+        {
+            "deviceId": "2b55da55",
+            "name": "com.risingpixel.androidgame",
+            "processId": 11227,
             "exited": false
         }
     ],

@@ -7,6 +7,8 @@ public class Timer : MonoBehaviour
     TriggerEndgameMenu _triggerEndgameMenu;
     private float _timeInSeconds = 60;
 
+    public float TimeInSeconds { get => _timeInSeconds; }
+
     void Start()
     {
         _triggerEndgameMenu = GetComponent<TriggerEndgameMenu>();

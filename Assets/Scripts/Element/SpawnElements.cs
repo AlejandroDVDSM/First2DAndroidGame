@@ -4,16 +4,33 @@ public class SpawnElements : MonoBehaviour
 {
     [SerializeField] float _minXAllowed, _maxXAllowed;
     [SerializeField] GameObject[] _badElements, _goodElements;
+    [SerializeField] Timer _timer;
 
     float _randomX;
     Vector2 _respawnPos;
 
     int _randomTypeOfElement;
+
+    float _minSpeed = .2f;
+    float _maxSpeed = .6f;
     float _randomSpeed;
 
     void Start()
     {
         InvokeRepeating("SpawnElement", .5f, 1.5f);
+    }
+
+    void Update()
+    {
+        if ((int)_timer.TimeInSeconds <= 40)
+        {
+            _minSpeed = .4f;
+            _maxSpeed = .8f;
+        } else if ((int)_timer.TimeInSeconds <= 20)
+        {
+            _minSpeed = .6f;
+            _maxSpeed = 1f;
+        }
     }
 
     void SpawnElement()
@@ -32,7 +49,6 @@ public class SpawnElements : MonoBehaviour
                 var goodElement = Instantiate(_goodElements[randomGoodElementIndex], _respawnPos, transform.rotation);
                 goodElement.GetComponent<Rigidbody2D>().gravityScale = _randomSpeed;
                 break;
-
         }
     }
 
@@ -43,6 +59,6 @@ public class SpawnElements : MonoBehaviour
 
         _randomTypeOfElement = Random.Range(0, 2);
 
-        _randomSpeed = Random.Range(.2f, .8f);
+        _randomSpeed = Random.Range(_minSpeed, _maxSpeed);
     }
 }
